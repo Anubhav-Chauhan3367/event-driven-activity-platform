@@ -9,6 +9,22 @@ This system demonstrates:
 - PostgreSQL relational modeling
 - Horizontal scalability design
 
+## Status
+
+🚧 Early development — architecture designed, implementation in progress.
+
+## Roadmap
+
+- [ ] PostgreSQL schema for users, activities, and notifications
+- [ ] NestJS + GraphQL API gateway scaffold
+- [ ] Kafka producer for activity ingestion
+- [ ] Kafka consumer(s) for downstream notification processing
+- [ ] Redis caching layer for feeds and notification reads
+- [ ] Notification feed API (paginated, per-user)
+- [ ] Next.js frontend for activity feed
+- [ ] Docker Compose for local dev (Kafka, Redis, Postgres, app)
+- [ ] Load test demonstrating horizontal scalability
+
 ## Problem statement:
 
 Modern applications require real-time activity processing, notification systems, and feed aggregation at scale. 
@@ -47,4 +63,3 @@ Redis is used as a caching layer to reduce repeated database reads for notificat
 PostgreSQL was chosen as the primary datastore due to the relational nature of the domain entities (users, activities, notifications) and the need for strong consistency and transactional guarantees.
 
 The system is structured as a modular monolith with clear domain boundaries, allowing future extraction into microservices if scaling requirements demand it.
-
